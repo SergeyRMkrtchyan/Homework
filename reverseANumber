@@ -1,0 +1,7 @@
+function reverseFunc(number){
+  number = number.toString().split('').reverse().join('');
+  number = parseInt(number);
+  console.log(number);
+}
+
+reverseFunc(123456);
