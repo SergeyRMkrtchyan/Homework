@@ -1,0 +1,11 @@
+function maxDigit(number){
+  var max = number%10;
+  while(number>0){
+    number = Math.floor(number/10);
+    if(number%10 > max)
+      max = number%10;
+  }
+  console.log(max);
+}
+
+maxDigit(6454);
