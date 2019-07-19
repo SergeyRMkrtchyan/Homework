@@ -1,0 +1,12 @@
+//Converting specified character of a string to opposite case
+
+function toUpper(word, letter){
+    for(var i=0; i<word.length; i++){
+      if(word[i] == letter)
+        word = word.replace(word[i], letter.toUpperCase());
+    }
+    console.log(word);
+  }
+  
+toUpper("baab", "a");
+  
