@@ -1,0 +1,24 @@
+//two versions of isPalindrome function
+
+function isPalindrome_1(word){
+  var result = true;
+  for(var i=0; i<word.length/2; i++)
+    if(word[i] == word[word.length-i-1])
+      continue;
+    else{
+      result = false;
+      break;
+    }
+    console.log(result);
+}
+
+function isPalindrome_2(word){
+  var reversedWord = word.split('').reverse().join('');
+  if(word === reversedWord)
+    console.log("true");
+  else  
+    console.log("false");
+}
+
+isPalindrome_1("abccba");
+isPalindrome_2("abbda");
