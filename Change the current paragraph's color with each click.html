@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Test</title>
+   </head>
+   <body>
+      <div id='div'></div>
+      <script>
+
+         var array = ['1st', '2nd', '3d', '4th'],
+             div = document.getElementById('div');
+         
+         for (var i of array) {
+             var p = document.createElement('p');
+             p.innerHTML = i;
+             div.appendChild(p);
+             p.style.fontSize = '45px';
+             p.onclick = function() {
+                 this.innerHTML = 'YOU CLICKED ME!';
+                 this.style.color = hexColorFunction();
+                 //or the short way:
+                 //this.style.color = ("#" + Math.random()).slice(2, 8);  
+             }
+         }
+         
+         function hexColorFunction() {
+             var color = '#',
+                 alphabet = '0123456789ABCDEF';
+             for (var i = 0; i < 6; i++)
+                 color += alphabet[(Math.floor(Math.random() * 16))];
+             return color;
+         }
+         
+      </script>
+   </body>
+</html>
